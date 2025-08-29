@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autre Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-... (clé raccourcie)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/Style.css"> <!-- Ton fichier CSS -->
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-brand">Amandine Lydia Letellier</div>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="navbar-links">
+            <li><a href="../../index.html">Mon CV</a></li>
+            <li><a href="#section1">Accueil</a></li>
+            <li><a href="#section2">Infos</a></li>
+            <li><a href="#section3">Projets</a></li>
+            <li><a href="#section4">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="layout">
+        <div class="sidebar">
+            <img src="../IMAGES/photoProfil.jpg" alt="Photo de profil" class="profil">
+            <h2>Bienvenue sur mon site web</h2>
+            <p>Tu peux revenir à mon CV via la navbar ci-dessus.</p>
+        </div>
+
+        <div class="content">
+            <section id="section1">
+                <h2>Bienvenue dans mon univers !</h2>
+                <img src="../IMAGES/bannière.jpg" alt="Bannière de bienvenue" class="banner-image">
+                <p>
+                    Passionnée par la technologie et la transmission du savoir, j’ai créé cet espace pour partager
+                    ce<br>
+                    qui m’anime : l’innovation, la pédagogie et la créativité. Ici, tu découvriras mes projets, mes<br>
+                    formations, et mes services autour du web, du code et de la création numérique.<br><br>
+
+                    Que tu sois curieux ou curieuse de comprendre comment fonctionne un site web, que tu veuilles
+                    apprendre le<br>
+                    HTML & CSS, ou que tu cherches quelqu’un pour concevoir ton propre site — tu es au bon
+                    endroit.<br><br>
+
+                    En tant que formatrice, j’ai accompagné des profils variés, du grand débutant.<br>
+                    Mon approche ? Rendre le code accessible, ludique et utile, avec des explications claires<br>
+                    et des mises en pratique concrètes.<br><br>
+
+                    <strong>Sur ce site, tu peux :</strong><br><br>
+
+                    Explorer mes services (création de site web, ou prendre un cours,...)<br>
+
+
+                    Et si tu veux en voir encore plus… Retrouve-moi sur TikTok pour des vidéos, et des<br>
+                    coulisses de mon Univers !
+                </p>
+            </section>
+<section id="section2" class="section-horizontal">
+  <div class="image-left">
+    <img src="../IMAGES/jeuxvideo.jpg" alt="Aperçu TikTok" class="side-image">
+  </div>
+  <div class="text-right">
+    <h2>Tu veux en voir plus ?</h2>
+    <p>
+      Ce n’est que le début ici. Pour découvrir encore plus de contenu, des coulisses, des vidéos exclusives ou juste te perdre dans mon univers… direction TikTok. Viens jeter un œil, ça vaut le détour.
+    </p>
+
+    <div class="video-wrapper">
+      <video controls>
+        <source src="../IMAGES/videointro.mp4" type="video/mp4">
+        Ton navigateur ne peut pas lire cette vidéo.
+      </video>
+      <a href="https://www.tiktok.com/@letellieral" target="_blank" class="tiktok-btn" aria-label="TikTok">Mon TikTok</a>
+    </div>
+  </div>
+</section>
+            <section id="section3">
+                <h2>Mes projets : entre code, créativité et transmission</h2>
+                <p>
+                    Bienvenue sur ma partie dédiée aux projets que j’ai réalisés avec passion et curiosité. Ici,
+                    vous<br>
+                    découvrirez un éventail de créations qui reflètent mon parcours, mes compétences et mon envie<br>
+                    constante d’innover.<br><br>
+
+                    Sites web, ateliers pédagogiques, expériences interactives, contenus numériques… Chaque projet<br>
+                    est le fruit d’un travail mêlant technologie, design, et accessibilité, avec toujours en ligne
+                    de<br>
+                    mire : transmettre, simplifier et inspirer.<br><br>
+
+                    Que ce soit dans le cadre de formations, de collaborations ou de défis personnels, j’ai à cœur
+                    de<br>
+                    concevoir des solutions utiles, esthétiques et adaptées aux besoins de chacun.<br><br>
+
+                    Parcourez les projets, explorez les coulisses, et n’hésitez pas à me contacter si l’un d’eux
+                    vous<br>
+                    parle ou vous donne envie de créer ensemble !</p><br>
+
+                <button onclick="toggleGallery()">Voir mes projets réalisés</button><br>
+                <div id="gallery" style="display:none;"><br>
+                    <div class="image-grid">
+                        <div class="project">
+                            <p><strong>Projet 1 :</strong> Création d'une alarme avec PCB</p><br>
+                            <img src="../IMAGES/alarm.PNG" alt="Projet 1">
+                        </div>
+                        <div class="project">
+                            <p><strong>Projet 2 :</strong> Création d'un robot voiture</p><br>
+                            <img src="../IMAGES/robot.jpg" alt="Projet 2">
+                        </div>
+                        <div class="project">
+                            <p><strong>Projet 3 :</strong> Apprendre la soudure</p><br>
+                            <img src="../IMAGES/soudure.JPG" alt="Projet 3">
+                        </div>
+                        <div class="project">
+                            <p><strong>Projet 4 :</strong> création de site web</p><br>
+                            <img src="../IMAGES/photoProfil.jpg" alt="Projet 4">
+                        </div>
+                        <div class="project">
+                            <p><strong>Projet 5 :</strong> création de site web</p><br>
+                            <img src="../IMAGES/photoProfil.jpg" alt="Projet 5">
+                        </div>
+                        <div class="project">
+                            <p><strong>Projet 6 :</strong> création contenue TikTok </p><br>
+                            <img src="../IMAGES/photoProfil.jpg" alt="Projet 6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section4">
+  <div class="contact-content">
+    <div class="contact-text">
+      <h2>Envie de créer, d’apprendre, ou de lancer un projet ensemble ? Ou de travailler ensemble ?</h2>
+      <p>
+        Tu veux un site web qui te ressemble, un projet numérique qui sort du lot, ou simplement découvrir<br>
+        le monde passionnant du code et de la fabrication ? Je suis là.<br><br>
+
+        <strong>Je peux t’aider à :</strong><br><br>
+
+        Créer ton propre site web, de l’idée à la mise en ligne<br>
+        Apprendre à coder avec Scratch ou Micro:bit, même si tu débutes<br>
+        Découvrir l’électronique, apprendre à souder, et construire des robots<br>
+        Imaginer des projets créatifs, interactifs, et surtout fun<br><br>
+
+        Que tu sois curieux, débutant, ou déjà passionné, je t’accompagne à ton rythme. Ensemble, on peut<br>
+        transformer une idée en réalité.<br><br>
+
+        Tu as une envie, un projet, ou juste l’envie d’explorer ? Écris-moi. On va faire des étincelles<br>
+        (au sens figuré… sauf si on soude ).<br><br>
+
+        <strong>"Voici mon contact :"</strong><br><br>
+        Pour me joindre, c’est par ici :<br>
+        Tu as une idée, une question ou juste envie de papoter projet ?<br><br>
+
+        <div class="contact-line">
+          <span><strong>Envie de créer ensemble ? Parlons-en :</strong><br><br>
+            Voici comment me contacter, je suis dispo et motivé !<br><br>
+            GSM : +32 472 98 58 32</span><br><br>
+
+          <strong>Prêt(e) à passer à l’action ?</strong><br><br>
+          Mon contact est juste là. Un petit message peut lancer une grande aventure.<br><br>
+          E-mail : <a href="mailto:letellier.ama@gmail.com">letellier.ama@gmail.com</a>
+        </div>
+      </p>
+    </div>
+
+    <div class="contact-image">
+      <img src="../IMAGES/photocontact.PNG" alt="Photo de contact" class="circle-image">
+    </div>
+  </div>
+</section>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="contact-line">
+            <span>GSM: +32 472 98 58 32</span>
+            <span>-</span>
+            E-mail:<a href="mailto:letelier.ama@gmail.com">letelier.ama@gmail.com</a>
+        </div><br>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100093556592432" target="_blank" aria-label="Facebook">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/sardinedessine/" target="_blank" aria-label="Instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@letellieral" target="_blank" aria-label="TikTok">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+            </a>
+        </div>
+
+        <p>&copy; 2025 - Tous droits réservés</p>
+    </div>
+
+    <!-- Script pour le menu mobile -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-links');
+            menu.classList.toggle('open');
+        }
+        function toggleGallery() {
+            const gallery = document.getElementById("gallery");
+            gallery.style.display = gallery.style.display === "none" ? "block" : "none";
+        }
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+</body>
+
+</html>

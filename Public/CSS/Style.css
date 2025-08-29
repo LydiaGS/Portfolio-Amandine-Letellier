@@ -151,15 +151,9 @@ section {
 }
 
 h2 {
-  font-family: 'Segoe UI Semibold', sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.5px;
-  color: var(--primary);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.5rem;
+  color: #2c5364;
   margin-bottom: 1rem;
 }
-
 
 ul {
   list-style: none;
@@ -349,79 +343,280 @@ ul.hobbies-list li::marker {
   }
 }
 
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.section-horizontal {
+  display: flex;
+  align-items: flex-start; /* aligne le texte en haut */
+  gap: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.image-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.side-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.text-right {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.video-wrapper {
+  width: 100%;
+  max-width: 300px; /* Taille réduite */
+  aspect-ratio: 9 / 16; /* Format TikTok vertical */
+  margin: 1rem auto 0 auto; /* Centré horizontalement */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Bouton centré, petit et arrondi */
+.tiktok-btn {
+  margin-top: 0.8rem;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  transition: background 0.3s ease;
+}
+
+.tiktok-btn:hover {
+  background-color: #333;
+}
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact-text {
+  flex: 1 1 60%;
+}
+
+.contact-image {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* 🔧 Responsive global pour écrans ≤ 768px */
 @media (max-width: 768px) {
-  /* Layout vertical */
   .layout {
     flex-direction: column;
   }
 
-  /* Sidebar devient horizontale ou cachée */
   .sidebar {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 1.5rem;
-    margin-top: 80px; /* pour ne pas cacher la navbar */
-    text-align: center;
-    box-shadow: none;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
     border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Contenu sans marge gauche */
   .content {
     margin-left: 0;
-    padding: 1.5rem;
-  }
-
-  /* Image profil plus petite */
-  .profil {
-    width: 100px;
-  }
-
-  /* Sections plus compactes */
-  section {
     padding: 1rem;
-    margin-bottom: 1rem;
   }
 
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  button {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* Grille d’images en colonne */
-  .image-grid {
+  .section-horizontal {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .image-left, .text-right {
+    min-width: 100%;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-text, .contact-image {
+    flex: 1 1 100%;
+  }
+
+  .circle-image {
+    width: 140px;
+    height: 140px;
+    margin-top: 1rem;
   }
 
   .project {
     width: 100%;
-    max-width: 300px;
   }
 
   .project img {
     height: auto;
   }
 
-  /* Cartes adaptables */
-  .card {
-    padding: 1rem;
+  .navbar-links {
+    flex-direction: column;
+    background-color: rgba(44, 83, 100, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
   }
 
-  .card p {
-    font-size: 13px;
+  .navbar-links.open {
+    display: flex;
   }
 
-  .card strong {
-    font-size: 14px;
+  .navbar-links li {
+    text-align: center;
+    margin: 0.5rem 0;
   }
 
-  /* Navbar déjà responsive dans ton code 👍 */
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+/* 📱 Ultra responsive pour écrans ≤ 480px */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p, .card p, .card strong {
+    font-size: 0.95rem;
+  }
+
+  button, .tiktok-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profil {
+    width: 100px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .footer .contact-line {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer .social-icons {
+    gap: 10px;
+  }
+}
+
+/* 📳 Ultra compact pour écrans ≤ 320px */
+@media (max-width: 320px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  p, .card p, .card strong {
+    font-size: 0.85rem;
+  }
+
+  .sidebar {
+    padding: 0.5rem;
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+
+  .video-wrapper {
+    max-width: 260px;
+  }
+
+  .circle-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  button, .tiktok-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-toggle {
+    font-size: 1.2rem;
+  }
 }
 
 
