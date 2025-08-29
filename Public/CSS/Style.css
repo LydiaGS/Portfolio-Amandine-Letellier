@@ -618,5 +618,32 @@ ul.hobbies-list li::marker {
     font-size: 1.2rem;
   }
 }
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    background-color: rgba(44, 83, 100, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
 
 
