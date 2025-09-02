@@ -792,13 +792,16 @@ ul.hobbies-list li::marker {
 
 #camembertCanvas {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px; /* réduit la taille max */
   height: auto;
-  flex: 1 1 300px;
+  margin: 2rem auto; /* centre horizontalement + marge verticale */
+  padding: 1rem; /* espace intérieur */
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block; /* nécessaire pour que margin auto fonctionne */
 }
+
 
 .skills-legend {
   flex: 1 1 200px;
@@ -881,6 +884,7 @@ ul.hobbies-list li::marker {
     opacity: 1;
   }
 }
+
 
 
 

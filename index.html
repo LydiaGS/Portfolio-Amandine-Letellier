@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-... (clé raccourcie)" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./Public/CSS/Style.css">
     <title>Document</title>
 </head>
@@ -71,16 +72,10 @@
             <section id="Compétences">
                 <h2>Compétences</h2>
                 <div class="skills-layout">
-                    <canvas id="camembertCanvas"></canvas>
-                    <div class="skills-legend">
-                        <div class="legend-item" style="--color:#00bfa6">Front-end</div>
-                        <div class="legend-item" style="--color:#2c5364">Électronique</div>
-                        <div class="legend-item" style="--color:#203a43">Robotique</div>
-                        <div class="legend-item" style="--color:#f4f6f8">Graphisme</div>
-                        <div class="legend-item" style="--color:#ffb347">Pédagogie</div>
-                        <div class="legend-item" style="--color:#ff6f61">Enfance</div>
-                    </div>
+         <canvas id="camembertCanvas" width="400" height="400"></canvas>
                 </div>
+                <div class="skills-wrapper">
+</div>
             </section>
             <section id="Formations">
                 <section id="timeline-formations">
@@ -95,7 +90,7 @@
                     </div>
                 </section>
 <section id="timeline">
-  <h2>Mon parcours dans l'informatique</h2>
+  <h2>Mon parcours professionnel dans l’informatique/h2>
   <div class="timeline-container">
     <div class="timeline-line"></div>
 
@@ -113,8 +108,6 @@
     </div>
   </div>
 </section>
-
-
 
                 <section id="Hobbies">
                     <h2>Mes Hobbies</h2>
@@ -181,45 +174,29 @@
   });
 
   steps.forEach(step => observer.observe(step));
+
+  const ctx = document.getElementById('camembertCanvas').getContext('2d');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['HTML&CSS', 'ROBOTIQUE', 'ELECTRONIQUE', 'Scratch, micro:bit, arduino,ESP32,...'],
+      datasets: [{
+        data: [70, 35,25,50],
+        backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
 </script>
-
-
-  steps.forEach(step => observer.observe(step));
-  
-</script>
-
-
-        window.addEventListener('scroll', revealFormationSteps);
-        window.addEventListener('load', revealFormationSteps);
-        const steps = document.querySelectorAll('.timeline-step');
-
-      
-        window.addEventListener('load', () => {
-            const canvas = document.getElementById('camembertCanvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            canvas.width = 400;
-            canvas.height = 400;
-
-            const data = [60, 40, 50, 20, 70, 80];
-            const colors = ['#00bfa6', '#2c5364', '#203a43', '#f4f6f8', '#ffb347', '#ff6f61'];
-            const total = data.reduce((a, b) => a + b, 0);
-            let startAngle = 0;
-
-            data.forEach((value, i) => {
-                const sliceAngle = (value / total) * 2 * Math.PI;
-                ctx.beginPath();
-                ctx.moveTo(200, 200);
-                ctx.arc(200, 200, 150, startAngle, startAngle + sliceAngle);
-                ctx.closePath();
-                ctx.fillStyle = colors[i];
-                ctx.fill();
-                startAngle += sliceAngle;
-            });
-        });
-
-    </script>
-
 </body>
 
 </html>
