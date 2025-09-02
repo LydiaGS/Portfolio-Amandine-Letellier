@@ -48,18 +48,22 @@
         <main class="content">
             <section id="Présentation">
                 <h2>Animatrice multimédia & formatrice en HTML & CSS</h2>
-                <p>Passionnée par la technologie et la transmission du savoir, je conçois des projets mêlant innovation,<br>
+                <p>Passionnée par la technologie et la transmission du savoir, je conçois des projets mêlant
+                    innovation,<br>
                     pédagogie et créativité. Mon parcours m’a permis de développer des compétences variées :<br>
                     programmation, création numérique, robotique et électronique ludique.<br>
                     <br><br>
-                    Curieuse et rigoureuse, j’aime comprendre et surtout expliquer de manière accessible, à travers des<br>
+                    Curieuse et rigoureuse, j’aime comprendre et surtout expliquer de manière accessible, à travers
+                    des<br>
                     ateliers, des supports digitaux ou des échanges directs.<br>
                     <br><br>
                     En tant que formatrice HTML & CSS, j’ai animé des formations adaptées à tous niveaux, en mettant<br>
-                    l’accent sur la vulgarisation, la pratique concrète et la valorisation des acquis. Mon objectif :<br>
+                    l’accent sur la vulgarisation, la pratique concrète et la valorisation des acquis. Mon objectif
+                    :<br>
                     rendre le code ludique, utile et accessible.
                     <br><br>
-                    Organisée, autonome et collaborative, je souhaite contribuer à des projets porteurs de sens, au sein<br>
+                    Organisée, autonome et collaborative, je souhaite contribuer à des projets porteurs de sens, au
+                    sein<br>
                     d’une structure tournée vers l’humain et l’innovation.<br>
                 </p>
                 <button onclick="window.location.href='./Public/HTML/enSavoirplus.html'">Mon Site web</button>
@@ -81,14 +85,37 @@
             <section id="Formations">
                 <section id="timeline-formations">
                     <h2> Mon parcours de formation</h2>
-                    <div class="timeline-horizontal">  
+                    <div class="timeline-horizontal">
                         <div class="formation-step">2023-Indsgn débutant- Avancé<br>UPDATES ASBL</div>
-                        <div class="formation-step"> 2021 – formation longue en devloppement web 2ans <br>Molengeek</div>
-                       <div class="formation-step"> 2017-Dilpôme Services Sociaux<br>Institut Reine Fabiola</div>
+                        <div class="formation-step"> 2021 – formation longue en devloppement web 2ans <br>Molengeek
+                        </div>
+                        <div class="formation-step"> 2017-Dilpôme Services Sociaux<br>Institut Reine Fabiola</div>
                         <div class="formation-step"> 2016 – Certificat d'animatrice<br>Latitude Jeunes</div>
                         <div class="formation-step">2007 – CEB</div>
                     </div>
                 </section>
+<section id="timeline">
+  <h2>Mon parcours dans l'informatique</h2>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-step" data-year="2022">
+      <h3>2022-2023</h3>
+      <p>Formatrice HTML & CSS<br>UPDATE ASBL</p>
+    </div>
+    <div class="timeline-step" data-year="2023">
+      <h3>2023-2025</h3>
+      <p>Animatrice multimédia<br>MAKS VZW<br>Je donnais des cours de programmation aux jeunes</p>
+    </div>
+    <div class="timeline-step" data-year="2023">
+      <h3>2024-2025</h3>
+      <p>Animatrice multimédia<br>MAKS VZW<br>Je gérais un EPN destiné aux adultes.</p>
+    </div>
+  </div>
+</section>
+
+
+
                 <section id="Hobbies">
                     <h2>Mes Hobbies</h2>
                     <div class="bubble-container">
@@ -140,31 +167,33 @@
                 }, index * 500);
             });
         });
-        const formationSteps = document.querySelectorAll('.formation-step');
+     
+  const steps = document.querySelectorAll('.timeline-step');
 
-        function revealFormationSteps() {
-            formationSteps.forEach(step => {
-                const rect = step.getBoundingClientRect();
-                if (rect.left < window.innerWidth - 100) {
-                    step.classList.add('visible');
-                }
-            });
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  steps.forEach(step => observer.observe(step));
+</script>
+
+
+  steps.forEach(step => observer.observe(step));
+  
+</script>
+
 
         window.addEventListener('scroll', revealFormationSteps);
         window.addEventListener('load', revealFormationSteps);
         const steps = document.querySelectorAll('.timeline-step');
 
-        function revealSteps() {
-            steps.forEach(step => {
-                const rect = step.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    step.classList.add('visible');
-                }
-            });
-        }
-
-
+      
         window.addEventListener('load', () => {
             const canvas = document.getElementById('camembertCanvas');
             if (!canvas) return;
@@ -188,9 +217,9 @@
                 startAngle += sliceAngle;
             });
         });
-    </script>
 
     </script>
+
 </body>
 
 </html>
