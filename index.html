@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +28,15 @@
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"
+                        target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.tiktok.com/@letellieral" target="_blank"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100093556592432" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sardinedessine/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+
                 </div>
             </div>
         </div>
@@ -162,40 +168,44 @@
             </div>
 
             <div class="footer-right">
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@letellieral" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100093556592432" target="_blank"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sardinedessine/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
-       <div class="footer-faq">
-  <h3>FAQ</h3>
-  <ul class="faq-list">
-    <li>
-      <span class="faq-question">Quels services proposes-tu ?</span>
-      <div class="faq-answer">Création de sites web, cours particuliers, ateliers pour jeunes.</div>
-    </li>
-    <li>
-      <span class="faq-question">À qui s’adressent tes cours ?</span>
-      <div class="faq-answer">Aux débutants, curieux et passionnés de technologie.</div>
-    </li>
-    <li>
-      <span class="faq-question">Quels outils utilises-tu ?</span>
-      <div class="faq-answer">HTML, CSS, JavaScript, Scratch, Arduino, Micro:bit, Git, etc.</div>
-    </li>
-    <li>
-      <span class="faq-question">Où se déroulent les ateliers ?</span>
-      <div class="faq-answer">À domicile ou en ligne selon les projets.</div>
-    </li>
-    <li>
-      <span class="faq-question">Peux-tu créer un site pour mon projet ?</span>
-      <div class="faq-answer">Oui, je propose des sites personnalisés adaptés à ton identité visuelle.</div>
-    </li>
-    <li>
-      <span class="faq-question">Comment te contacter ?</span>
-      <div class="faq-answer">Par WhatsApp ou email, du lundi au vendredi.</div>
-    </li>
-  </ul>
-</div>
+            <div class="footer-faq">
+                <h3>FAQ</h3>
+                <ul class="faq-list">
+                    <li>
+                        <span class="faq-question">Quels services proposes-tu ?</span>
+                        <div class="faq-answer">Création de sites web, cours particuliers, ateliers pour jeunes.</div>
+                    </li>
+                    <li>
+                        <span class="faq-question">À qui s’adressent tes cours ?</span>
+                        <div class="faq-answer">Aux débutants, curieux et passionnés de technologie.</div>
+                    </li>
+                    <li>
+                        <span class="faq-question">Quels outils utilises-tu ?</span>
+                        <div class="faq-answer">HTML, CSS, JavaScript, Scratch, Arduino, Micro:bit, Git, etc.</div>
+                    </li>
+                    <li>
+                        <span class="faq-question">Où se déroulent les ateliers ?</span>
+                        <div class="faq-answer">À domicile ou en ligne selon les projets.</div>
+                    </li>
+                    <li>
+                        <span class="faq-question">Peux-tu créer un site pour mon projet ?</span>
+                        <div class="faq-answer">Oui, je propose des sites personnalisés adaptés à ton identité visuelle.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="faq-question">Comment te contacter ?</span>
+                        <div class="faq-answer">Par WhatsApp ou email, du lundi au vendredi.</div>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </footer>
@@ -206,20 +216,20 @@
         burger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-        
-  document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-      const item = question.parentElement;
-      item.classList.toggle('faq-item-open');
 
-      // Fermer les autres
-      document.querySelectorAll('.faq-list li').forEach(other => {
-        if (other !== item) {
-          other.classList.remove('faq-item-open');
-        }
-      });
-    });
-  });
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('faq-item-open');
+
+                // Fermer les autres
+                document.querySelectorAll('.faq-list li').forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove('faq-item-open');
+                    }
+                });
+            });
+        });
     </script>
 
 </body>
