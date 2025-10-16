@@ -422,6 +422,135 @@ margin: 0;
   line-height: 1.6;
   color: #333;
 }
+.projets {
+  padding: 80px 10%;
+  background: #fff;
+  text-align: center;
+}
+
+.projets h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.timeline-section {
+  padding: 80px 10%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.timeline-container {
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 40px;
+}
+
+.timeline-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+  z-index: 0;
+}
+
+.timeline {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-item img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.timeline-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 120px;
+  }
+
+  .timeline-section h2 {
+    font-size: 28px;
+  }
+}
+
+.projet {
+  background: #eeedee;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.projet:hover {
+  transform: translateY(-5px);
+}
+
+.projet img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.projet h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.projet p {
+  font-size: 16px;
+  color: #333;
+}
+
+.projet a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 .contact {
   padding: 80px 10%;
   background: #f7f7f7;
